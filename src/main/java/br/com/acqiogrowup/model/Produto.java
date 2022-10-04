@@ -11,15 +11,13 @@ import java.io.Serializable;
 
 @Entity
 @Getter @Setter
-public class Cartao implements Serializable {
+public class Produto implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cartaoId;
-    private String nomeTitular;
-    private String numeroCartao;
-    private Integer mesValidade;
-    private Integer anoValidade;
-    private Integer cvv;
+    private Long produtoId;
+    private String nome;
+    private Double valor;
+    private Integer quantEstoque;
 
 }
