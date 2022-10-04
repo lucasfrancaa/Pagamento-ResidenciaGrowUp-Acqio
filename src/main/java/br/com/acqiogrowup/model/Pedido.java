@@ -31,4 +31,5 @@ public class Pedido implements Serializable {
     @OneToOne
     @JoinColumn (name="idEndereco")
     private Endereco endereco;
+
 }
