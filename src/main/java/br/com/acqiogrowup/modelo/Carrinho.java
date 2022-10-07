@@ -1,4 +1,4 @@
-package br.com.acqiogrowup.model;
+package br.com.acqiogrowup.modelo;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,9 +15,13 @@ public class Carrinho implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long carrinhoId;
     private Double valorTotal;
+    @ManyToOne
+    @JoinColumn(name = "cliente_cliente_id")
     private Cliente cliente;
 
-    @ManyToOne
+  /*  @ManyToOne
     @JoinColumn (name="idProduto")
     private List<Produto> listaProdutos;
+    */
+
 }

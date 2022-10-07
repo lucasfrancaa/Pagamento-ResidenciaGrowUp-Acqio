@@ -1,8 +1,7 @@
-package br.com.acqiogrowup.model;
+package br.com.acqiogrowup.modelo;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.*;
 import java.io.Serializable;

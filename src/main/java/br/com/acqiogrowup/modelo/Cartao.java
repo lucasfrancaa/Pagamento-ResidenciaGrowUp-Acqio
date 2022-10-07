@@ -1,4 +1,4 @@
-package br.com.acqiogrowup.model;
+package br.com.acqiogrowup.modelo;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,13 +11,15 @@ import java.io.Serializable;
 
 @Entity
 @Getter @Setter
-public class Produto implements Serializable {
+public class Cartao implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long produtoId;
-    private String nome;
-    private Double valor;
-    private Integer quantEstoque;
+    private Long cartaoId;
+    private String nomeTitular;
+    private String numeroCartao;
+    private Integer mesValidade;
+    private Integer anoValidade;
+    private Integer cvv;
 
 }

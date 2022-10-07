@@ -1,4 +1,4 @@
-package br.com.acqiogrowup.model;
+package br.com.acqiogrowup.modelo;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,9 +16,11 @@ public class Pedido implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long pedidoId;
 
+    /*
     @ManyToOne
     @JoinColumn (name="idProduto")
     private List<Produto> listaProdutos;
+     */
 
     @OneToOne
     @JoinColumn (name="idCliente")

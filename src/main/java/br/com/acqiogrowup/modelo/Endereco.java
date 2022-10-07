@@ -1,4 +1,4 @@
-package br.com.acqiogrowup.model;
+package br.com.acqiogrowup.modelo;
 
 import lombok.Getter;
 import lombok.Setter;
