@@ -14,13 +14,8 @@ public class ProdutoController {
     @Autowired
     ProdutoRepositorio produtoRepositorio;
 
-    @PostMapping
-    public Produto create (@RequestBody Produto produto){
-        return produtoRepositorio.save(produto);
-    }
-
     @GetMapping
-    public List<Produto> list(){
+    public List<Produto> listar(){
         return produtoRepositorio.findAll();
     }
 }
