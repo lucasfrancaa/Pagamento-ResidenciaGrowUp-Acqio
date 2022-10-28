@@ -8,7 +8,6 @@ import java.io.Serializable;
 
 @Entity
 @Getter @Setter
-//@Table(name="nome-tabela")
 public class Cliente implements Serializable {
 
     @Id
@@ -20,9 +19,11 @@ public class Cliente implements Serializable {
     private String telefone;
     private String email;
 
+    /*
     @OneToOne
     @JoinColumn (name="idCarrinho")
     private Carrinho carrinho;
+    */
 
     @ManyToOne
     @JoinColumn (name="idEndereco")

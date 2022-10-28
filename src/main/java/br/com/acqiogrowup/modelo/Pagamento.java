@@ -16,7 +16,16 @@ public class Pagamento implements Serializable {
     private Double valor;
     private Integer parcelas;
 
-    @OneToOne
+
+    /* OBSERVAÇÃO
+
+    ANTES ESTAVA COM @ONETOMANY E AGORA MUDAMOS PRA @MANYTOONE
+
+    QUAL O CORRETO?
+
+    */
+
+    @ManyToOne
     @JoinColumn (name="idCartao")
     private Cartao cartao;
 

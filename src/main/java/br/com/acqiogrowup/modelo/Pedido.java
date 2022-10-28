@@ -16,22 +16,28 @@ public class Pedido implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long pedidoId;
 
-    /*
-    @ManyToOne
+
+    @OneToMany
     @JoinColumn (name="idProduto")
     private List<Produto> listaProdutos;
-     */
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn (name="idCliente")
     private Cliente cliente;
 
-    @OneToOne
+
+    /* OBSERVAÇÃO
+
+    NESSES DOIS ATRIBUTOS ABAIXO O @ONETOONE NÃO IMPEDE O PROJETO DE FUNCIONAR,
+    JÁ COM O @ONETOMANY OS TIPOS DÃO ERRO.
+
+    */
+
+    @ManyToOne
     @JoinColumn (name="idPagamento")
     private Pagamento pagamento;
 
     @OneToOne
     @JoinColumn (name="idEndereco")
     private Endereco endereco;
-// teste
 }

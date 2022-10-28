@@ -15,13 +15,15 @@ public class Carrinho implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long carrinhoId;
     private Double valorTotal;
-    @ManyToOne
+
+    @OneToOne
     @JoinColumn(name = "cliente_cliente_id")
     private Cliente cliente;
 
-  /*  @ManyToOne
+    @OneToMany
     @JoinColumn (name="idProduto")
     private List<Produto> listaProdutos;
-    */
+
+
 
 }
