@@ -21,12 +21,4 @@ public class CarrinhoControlador {
         return carrinhoRepositorio.findAll();
     }
 
-    /*
-    @PostMapping
-    public void inserir(Produto produto) {
-        produtoRepositorio.save(produto);
-    }
-
-     */
-
 }
