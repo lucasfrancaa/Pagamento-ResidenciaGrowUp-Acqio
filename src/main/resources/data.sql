@@ -1,7 +1,7 @@
-create table PRODUTO
+create table produto
 (
-    NOME         VARCHAR not null,
-    VALOR        DECIMAL not null,
-    QUANTESTOQUE INTEGER not null
+    nome         VARCHAR not null,
+    valor        DECIMAL not null,
+    quantEstoque INTEGER not null
 );
-INSERT INTO PRODUTO (NOME, VALOR, QUANTESTOQUE) VALUES ('camisa', 50.0, 25);
+INSERT INTO produto (nome, valor, quantEstoque) VALUES ('camisa', 50.0, 25);
