@@ -1,6 +1,7 @@
 package br.com.acqiogrowup.controlador;
 
 import br.com.acqiogrowup.modelo.Carrinho;
+import br.com.acqiogrowup.modelo.Produto;
 import br.com.acqiogrowup.repositorio.CarrinhoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,9 +21,12 @@ public class CarrinhoControlador {
         return carrinhoRepositorio.findAll();
     }
 
+    /*
     @PostMapping
-    public void inserir(Carrinho carrinho) {
-        carrinhoRepositorio.save(carrinho);
+    public void inserir(Produto produto) {
+        produtoRepositorio.save(produto);
     }
+
+     */
 
 }
