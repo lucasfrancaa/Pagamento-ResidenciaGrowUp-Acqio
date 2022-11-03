@@ -9,16 +9,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cliente")
-
 public class ClienteControlador {
 
     @Autowired
     ClienteRepositorio clienteRepositorio;
 
     @PostMapping
-    public void cadastrar(Cliente cliente) {
-        clienteRepositorio.save(cliente);
-    };
+    public Cliente cadastrar (@RequestBody Cliente cliente){
+        return clienteRepositorio.save(cliente);
+    }
+
 
     @GetMapping
     public List<Cliente> listar(){

@@ -1,5 +1,6 @@
 package br.com.acqiogrowup.modelo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,12 +17,12 @@ public class Carrinho implements Serializable {
     private Long carrinhoId;
     private Double valorTotal;
 
-    @OneToOne
-    @JoinColumn(name = "cliente_cliente_id")
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    @JsonIgnore
     private Cliente cliente;
 
-    @OneToMany
-    @JoinColumn (name="idProduto")
+    @OneToMany(mappedBy = "carrinho")
     private List<Produto> listaProdutos;
 
 

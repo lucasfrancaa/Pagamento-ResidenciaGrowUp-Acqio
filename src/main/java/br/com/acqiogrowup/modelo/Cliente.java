@@ -1,5 +1,6 @@
 package br.com.acqiogrowup.modelo;
 
+import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +26,7 @@ public class Cliente implements Serializable {
     private Carrinho carrinho;
     */
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn (name="idEndereco")
     private Endereco endereco;
 

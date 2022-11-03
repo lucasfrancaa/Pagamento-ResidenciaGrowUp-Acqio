@@ -18,4 +18,10 @@ public class ProdutoControlador {
     public List<Produto> listar(){
         return produtoRepositorio.findAll();
     }
+
+    /* OBS
+
+    PRECISAMOS INSERIR O PRODUTO NO CARRINHO
+
+     */
 }
